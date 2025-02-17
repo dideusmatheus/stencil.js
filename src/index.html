@@ -9,6 +9,21 @@
     <script nomodule src="/build/stencil-design-system-canais-digitais.js"></script>
   </head>
   <body>
-    <my-component first="Stencil" middle="'Don't call me a framework'" last="JS"></my-component>
+    <web-button>
+      <span>🔴 Customizado</span>
+    </web-button>
   </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const button = document.querySelector("web-button");
+  
+      if (button) {
+        button.addEventListener("emitClick", function () {
+          console.log("Cliquei!");
+        });
+      }
+    });
+  </script>
+  
 </html>

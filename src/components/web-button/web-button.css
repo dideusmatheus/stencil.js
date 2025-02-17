@@ -1,0 +1,29 @@
+button{
+  width: 100%;
+  height: 48px;
+  padding: 13px 24px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.default{
+  /* color: ; */
+  background-color: #560599;
+  border: 1px solid #560599;
+}
+
+.default:hover{
+  background-color: #830CE5;
+  border: 1px solid #830CE5;
+}
+
+.bene{
+  background-color: red;
+  border: 1px solid red;
+}
+
+.bene:hover{
+  background-color: rgb(173, 2, 2);
+  border: 1px solid rgb(173, 2, 2);
+}
