@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
+import { Component, h, Prop, Event, EventEmitter } from '@stencil/core';
 
 @Component({
   tag: 'web-button',
@@ -6,7 +6,9 @@ import { Component, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
   shadow: true,
 })
 export class WebButton {
-  @Prop() project: 'default' | 'bene' = 'default';
+  @Prop() labelBtn = 'defaul label';
+  @Prop() typeBtn: 'primary-default' | 'secondary-default' | 'tertiary-default' = 'primary-default';
+  @Prop() disableBtn = false;
 
   // Evento que será emitido ao clicar no botão
   @Event() emitClick: EventEmitter<void>;
@@ -16,9 +18,13 @@ export class WebButton {
   };
 
   render() {
+    const buttonClasses = this.disableBtn ? 'disable-btn' : this.typeBtn;
+    const textClasses = `text-button ${this.typeBtn}-text`;
+
     return (
-      <button class={this.project} onClick={this.handleClick}>
-        <slot></slot>
+      <button disabled={this.disableBtn} class={buttonClasses} onClick={this.handleClick}>
+        <p class={textClasses}>{this.labelBtn}</p>
+        {/* <slot></slot> */}
       </button>
     );
   }

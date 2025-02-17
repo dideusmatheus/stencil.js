@@ -7,7 +7,9 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface WebButton {
-        "project": 'default' | 'bene';
+        "disableBtn": boolean;
+        "labelBtn": string;
+        "typeBtn": 'primary-default' | 'secondary-default' | 'tertiary-default';
     }
 }
 export interface WebButtonCustomEvent<T> extends CustomEvent<T> {
@@ -38,8 +40,10 @@ declare global {
 }
 declare namespace LocalJSX {
     interface WebButton {
+        "disableBtn"?: boolean;
+        "labelBtn"?: string;
         "onEmitClick"?: (event: WebButtonCustomEvent<void>) => void;
-        "project"?: 'default' | 'bene';
+        "typeBtn"?: 'primary-default' | 'secondary-default' | 'tertiary-default';
     }
     interface IntrinsicElements {
         "web-button": WebButton;

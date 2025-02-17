@@ -5,20 +5,103 @@ button{
   border-radius: 5px;
   border: 1px solid transparent;
   cursor: pointer;
+  font-family: 'Blinker', sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.default{
-  /* color: ; */
+.text-button{
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/*---------- primary-default ---------- */
+.primary-default{
   background-color: #560599;
   border: 1px solid #560599;
 }
 
-.default:hover{
+.primary-default:hover{
   background-color: #830CE5;
   border: 1px solid #830CE5;
 }
 
-.bene{
+.primary-default:focus{
+  border: 2px solid #560599;
+  background-color: #560599;
+}
+
+.primary-default-text{
+  color: #FFFFFF;
+}
+
+/*---------- secondary-default ---------- */
+.secondary-default{
+  background-color: #FFFFFF;
+  border: 1px solid #560599;
+}
+
+.secondary-default:hover{
+  background-color: #F2F2F2;
+  border: 1px solid #830CE5;
+}
+
+.secondary-default:focus{
+  border: 2px solid #666666;
+}
+
+.secondary-default-text{
+  color: #830CE5;
+}
+/*---------- tertiary-default ---------- */
+.tertiary-default{
+  background-color: #FFFFFF;
+  border: 1px solid transparent;
+}
+
+.tertiary-default:hover{
+  background-color: #F2F2F2;
+  border: 1px solid transparent;
+}
+
+.tertiary-default:focus{
+  border: 2px solid #666666;
+}
+
+.tertiary-default-text{
+  color: #830CE5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------- disable btn ---------- */
+.disable-btn{
+  background-color: #F2F2F2;
+}
+
+/*---------- bene ---------- */
+/* .bene{
   background-color: red;
   border: 1px solid red;
 }
@@ -26,4 +109,4 @@ button{
 .bene:hover{
   background-color: rgb(173, 2, 2);
   border: 1px solid rgb(173, 2, 2);
-}
+} */
